@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <div style="border-style: solid; display:inline-block; padding: auto">
+            <label>Konvertuoti valiutas</label>
+            <input id="amount" type="number">
+            <input type="button" onclick="convertCurrency()" value="Konvertuoti"><br>
+            <label style="padding-right: 5px">Iš:</label> <select id="currencyFrom"></select><br>
+            <label style="padding-right: 11px">Į:</label> <select id="currencyTo"></select> <br>
+            <label>Vertė: <div id="output"></div></label>
+        </div><br>
+
+        <hr>
+        
+        <p style="border-style: solid; display:inline-block; padding: auto">
+            <label>Pasirinkite valiutą, kurios grafiką norite pamatyti:</label><br>
+            <select id="currency"></select>
+            <input type="button" onclick="getFxRatesForCurrency()" value="Nupiešti grafiką">
+        
+            <div id="curve_chart" style="width: 100%;"></div>
+        </p>
+        
+        <hr>
+
+        <h3>Dabartinės valiutų vertės</h3>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+        <script src="script.js"></script>
+    </body>
+</html>
